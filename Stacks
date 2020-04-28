@@ -1,0 +1,26 @@
+class MinStack(object):
+
+    def __init__(self):
+        self.list = []
+        
+
+    def push(self, x):
+        self.list.append(x)
+        
+
+    def pop(self):
+        self.list.pop()
+        self.list.append([])
+        
+
+    def top(self):
+        if len(self.list)!=0:
+            return self.list[-1]
+        else:
+            return []
+        
+
+    def getMin(self):
+        return min(self.list)
+        
+    
